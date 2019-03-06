@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
 import Home from '../src/components/home'
+import Javascript30 from './components/javascriptThirty';
+
+import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <Home />
+      <div>
+        <Home />
+        <Javascript30 />
+      </div>
     );
   }
 }
