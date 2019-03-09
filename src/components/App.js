@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Home from '../src/components/home'
-import Javascript30 from './components/javascriptThirty';
+import Home from './home'
+import Javascript30 from './javascriptThirty';
 
 import './App.css';
-import DrumKit from './components/javascriptThirty/projects/drumKit';
+import DrumKit from './javascriptThirty/projects/drumKit';
 
 class App extends Component {
   render() {
