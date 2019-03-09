@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div>
                 <div>
-                    <Link to='/'>Fernando Brandao</Link>
+                    <Link to='/home'>Fernando Brandao</Link>
                 </div>
                 <div>
                     <Javascript30 />
