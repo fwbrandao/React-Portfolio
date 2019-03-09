@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Javascript30 from '../javascriptThirty';
 
 class Home extends Component {
-    state = {  }
+    state = {}
     render() {
         return (
-            <div>Fernando Brandao</div>
-         );
+            <div>
+                <div>
+                    <Link to='/'>Fernando Brandao</Link>
+                </div>
+                <div>
+                    <Javascript30 />
+                </div>
+            </div>
+        );
     }
 }
 

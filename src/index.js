@@ -6,10 +6,10 @@ import './index.css';
 
 ReactDOM.render(
 
-        <BrowserRouter>
-            <Route path='/' component={App} />
-        </BrowserRouter>
+    <BrowserRouter>
+        <Route path='/' component={App} />
+    </BrowserRouter>
 
-    ,document.querySelector('#root'));
+    , document.querySelector('#root'));
 
 
