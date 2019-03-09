@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import Javascript30 from './javascriptThirty/index';
 import Home from './home'
-import Javascript30 from './javascriptThirty';
-
 import './App.css';
-import DrumKit from './javascriptThirty/projects/drumKit';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Home />
-        <Javascript30 />
-        <DrumKit />
+        <Route path='/' component={Home} ></Route>
+        <Route path='/javascriptThirty' component={Javascript30} ></Route>
       </div>
     );
   }
