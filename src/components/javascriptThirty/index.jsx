@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Javascript30 extends Component {
+class Javascript30 extends React.Component {
     state = {}
     render() {
         return (

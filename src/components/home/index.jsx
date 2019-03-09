@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Javascript30 from '../javascriptThirty';
+import NavBar from '../NavBar';
 
-class Home extends Component {
+class Home extends React.Component {
     state = {}
     render() {
         return (
             <div>
                 <div>
-                    <Link to='/home'>Fernando Brandao</Link>
+                    <Link to='/'>Fernando Brandao</Link>
+                </div>
+                <div>
+
+                    {/* <NavBar /> */}
                 </div>
                 <div>
                     <Javascript30 />

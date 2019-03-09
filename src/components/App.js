@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Home from './home';
@@ -7,7 +7,7 @@ import DrumKit from './javascriptThirty/projects/drumKit';
 
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
