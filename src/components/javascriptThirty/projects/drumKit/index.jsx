@@ -1,16 +1,54 @@
 import React, { Component } from 'react';
+import boom from './sounds/boom.wav';
+import clap from './sounds/clap.wav';
+import hihat from './sounds/hihat.wav';
+import kick from './sounds/kick.wav';
+import openhat from './sounds/openhat.wav';
+import ride from './sounds/ride.wav';
+import snare from './sounds/snare.wav';
+import tink from './sounds/tink.wav';
+import tom from './sounds/tom.wav';
+
 import './drumKit.css';
 
 class DrumKit extends Component {
-    state = {}
+    constructor(props) {
+        super(props);
+        this.soundDiv = React.createRef();
+    }
 
-    
+    componentDidMount() {
+        this.soundDiv.current.addEventListener('keydown', this.handleKey);
+        this.soundDiv.current.focus();
+    }
 
+    componentWillUnmount() {
+        this.soundDiv.current.removeEventListener('keydown', this.handleKey);
+    }
+
+    handleKey = e => {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+        if (!audio) return; // stop func from running is no audio selector
+        audio.currentTime = 0; // rewind to start
+        audio.play();
+
+        key.classList.add('playing');
+
+        const keys = document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transitionend', this.removeTransition));
+    }
+
+    removeTransition(e) {
+        if (e.propertyName !== 'transform') return; // skit if not transform
+        this.classList.remove('playing');
+    }
 
     render() {
         return (
-            <div className="main">
-                <div className="keys">
+            <div className="main" tabIndex="0" onKeyDown={this.handleKey}>
+                <div className="keys" tabIndex="1" ref={this.soundDiv}>
                     <div data-key="65" className="key">
                         <kbd>A</kbd>
                         <span className="sound">clap</span>
@@ -49,15 +87,15 @@ class DrumKit extends Component {
                     </div>
                 </div>
 
-                <audio data-key="65" src="sounds/clap.wav"></audio>
-                <audio data-key="83" src="sounds/hihat.wav"></audio>
-                <audio data-key="68" src="sounds/kick.wav"></audio>
-                <audio data-key="70" src="sounds/openhat.wav"></audio>
-                <audio data-key="71" src="sounds/boom.wav"></audio>
-                <audio data-key="72" src="sounds/ride.wav"></audio>
-                <audio data-key="74" src="sounds/snare.wav"></audio>
-                <audio data-key="75" src="sounds/tom.wav"></audio>
-                <audio data-key="76" src="sounds/tink.wav"></audio>
+                <audio data-key="65" src={clap}></audio>
+                <audio data-key="83" src={hihat}></audio>
+                <audio data-key="68" src={kick}></audio>
+                <audio data-key="70" src={openhat}></audio>
+                <audio data-key="71" src={boom}></audio>
+                <audio data-key="72" src={ride}></audio>
+                <audio data-key="74" src={snare}></audio>
+                <audio data-key="75" src={tom}></audio>
+                <audio data-key="76" src={tink}></audio>
 
             </div>
         );
