@@ -1,22 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Javascript30 from '../javascriptThirty';
-import NavBar from '../NavBar';
+import ComponentNavBar from '../NavBar';
 
 class Home extends React.Component {
-    state = {}
+    componentDidMount() {
+        document.body.classList.toggle("index-page");
+    }
+    componentWillUnmount() {
+        document.body.classList.toggle("index-page");
+    }
+
     render() {
         return (
             <div>
                 <div>
-                    <Link to='/'>Fernando Brandao</Link>
-                </div>
-                <div>
-
-                    {/* <NavBar /> */}
-                </div>
-                <div>
-                    <Javascript30 />
+                    <ComponentNavBar />
                 </div>
             </div>
         );
