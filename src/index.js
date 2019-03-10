@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Root from './Root';
 
 import App from './components/App';
 
@@ -9,11 +10,13 @@ import "/Users/nando/master-portfolio-2019/master-portfolio-2019/src/assets/scss
 import "/Users/nando/master-portfolio-2019/master-portfolio-2019/src/assets/demo/demo.css"
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Switch>
-            <Route path='/' component={App}></Route>
-        </Switch>
-    </BrowserRouter>
+    <Root>
+        <BrowserRouter>
+            <Switch>
+                <Route path='/' component={App} />
+            </Switch>
+        </BrowserRouter>
+    </Root>
     , document.querySelector('#root'));
 
 

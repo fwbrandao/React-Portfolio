@@ -12,6 +12,10 @@ import tom from './sounds/tom.wav';
 import './drumKit.css';
 
 class DrumKit extends Component {
+    static contextTypes = {
+        router: () => true, // replace with PropTypes.object if you use them
+    }
+
     constructor(props) {
         super(props);
         this.soundDiv = React.createRef();
@@ -49,6 +53,9 @@ class DrumKit extends Component {
         return (
             <div className="main" tabIndex="0" onKeyDown={this.handleKey}>
                 <div className="keys" tabIndex="1" ref={this.soundDiv}>
+                <div className='goBack'>
+                    <buton className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</buton>
+                </div>
                     <div data-key="65" className="key">
                         <kbd>A</kbd>
                         <span className="sound">clap</span>
