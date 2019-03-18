@@ -11,6 +11,7 @@ class Javascript30 extends React.Component {
                     <ul>
                         <li>
                             <Link to='/drum' >Drum Kit</Link>
+                            <Link to='/jsclock' >JS Clock</Link>
                         </li>
                     </ul>
                 </div>
