@@ -58,7 +58,7 @@ class JsClock extends Component {
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         return (
 
-            <div className="main">
+            <div className="mainClock">
                 <div className='goBack'>
                     <buton className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</buton>
                 </div>

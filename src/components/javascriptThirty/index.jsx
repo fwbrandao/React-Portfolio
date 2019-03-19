@@ -15,6 +15,9 @@ class Javascript30 extends React.Component {
                         <li>
                             <Link to='/jsclock' >JS Clock</Link>
                         </li>
+                        <li>
+                            <Link to='/canvas' >Canvas</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

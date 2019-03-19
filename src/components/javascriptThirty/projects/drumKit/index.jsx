@@ -51,7 +51,7 @@ class DrumKit extends Component {
 
     render() {
         return (
-            <div className="main" tabIndex="0" onKeyDown={this.handleKey}>
+            <div className="mainDrum" tabIndex="0" onKeyDown={this.handleKey}>
                 <div className="keys" tabIndex="1" ref={this.soundDiv}>
                 <div className='goBack'>
                     <buton className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</buton>
