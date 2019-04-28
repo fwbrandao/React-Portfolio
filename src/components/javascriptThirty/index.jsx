@@ -10,7 +10,7 @@ class Javascript30 extends React.Component {
                 <div>
                     <ul>
                         <li>
-                            <Link to='/drum' >Drum Kit</Link>
+                            <Link to='/drum' >Drum Kit </Link>
                         </li>
                         <li>
                             <Link to='/jsclock' >JS Clock</Link>

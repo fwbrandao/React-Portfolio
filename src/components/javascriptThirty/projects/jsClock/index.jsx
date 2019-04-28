@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './jsClock.css';
 
 class JsClock extends Component {
     static contextTypes = {
-        router: () => true, // replace with PropTypes.object if you use them
-    }
+        router: PropTypes.object
+      }
 
     constructor() {
         super()

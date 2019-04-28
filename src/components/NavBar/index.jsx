@@ -150,7 +150,7 @@ class ComponentNavBar extends React.Component {
                                     target="_blank"
                                     title="GitHub"
                                 >
-                                    <i class="fab fa-github-square"></i>
+                                    <i className="fab fa-github-square"></i>
                                     <p className="d-lg-none d-xl-none">GitHub</p>
                                 </NavLink>
                             </NavItem>
