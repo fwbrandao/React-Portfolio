@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import Javascript30 from '../javascriptThirty';
+import MapBox from '../mapBox/index';
 
 // reactstrap components
 import {
@@ -174,7 +175,18 @@ class ComponentNavBar extends React.Component {
                                     target="_blank"
                                     title="Follow us on Instagram"
                                 >
-                                   <Javascript30 />
+                                    <Javascript30 />
+                                </NavLink>
+                            </NavItem>
+                            <NavItem className="p-0">
+                                <NavLink
+                                    data-placement="bottom"
+                                    href=""
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    title="Follow us on Instagram"
+                                >
+                                    <MapBox />
                                 </NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav>
