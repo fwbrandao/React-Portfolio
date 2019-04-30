@@ -1,4 +1,4 @@
-Tecknologies used in this portfolio:
+Technologies used in this portfolio:
 REACT,
 DECK GL,
 MAPBOX,
