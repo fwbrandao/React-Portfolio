@@ -1,5 +1,5 @@
 Tecknologies used in this portfolio:
-REACT
+REACT,
 DECK GL,
 MAPBOX,
 VANILLA JS,
