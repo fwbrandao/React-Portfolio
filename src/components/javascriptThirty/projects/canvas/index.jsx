@@ -90,7 +90,7 @@ render() {
     return (
         <div className="mainCanvas" ref={this.canvasDiv}>
             <div className='goBack'>
-                <buton className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</buton>
+                <button className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</button>
             </div>
             <canvas id="draw" width="800" height="800"></canvas>
         </div>

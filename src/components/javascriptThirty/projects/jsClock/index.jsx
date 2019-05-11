@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './jsClock.css';
 
 class JsClock extends Component {
+
     static contextTypes = {
         router: PropTypes.object
       }
@@ -24,9 +25,14 @@ class JsClock extends Component {
     }
 
     countingSecond() {
-        const secondHand = document.querySelector('.second-hand');
-        const minsHand = document.querySelector('.min-hand');
-        const hourHand = document.querySelector('.hour-hand');
+        const secondsDegrees = ((this.state.seconds / 60) * 360) + 90;
+        const secondHand = document.querySelector('.second-hand').style.transform = `rotate(${secondsDegrees}deg)`;
+
+        const minsDegrees = ((this.state.minutes / 60) * 360) + ((this.state.seconds / 60) * 6) + 90;
+        const minsHand = document.querySelector('.min-hand').style.transform = `rotate(${minsDegrees}deg)`;
+
+        const hourDegrees = ((this.state.hours / 12) * 360) + ((this.state.minutes / 60) * 30) + 90;
+        const hourHand = document.querySelector('.hour-hand').style.transform = `rotate(${hourDegrees}deg)`;
 
         let d = new Date()
         this.setState({
@@ -39,18 +45,9 @@ class JsClock extends Component {
             minutes: d.getMinutes(),
             seconds: d.getSeconds()
         })
-
-        const secondsDegrees = ((this.state.seconds / 60) * 360) + 90;
-        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-
-        const minsDegrees = ((this.state.minutes / 60) * 360) + ((this.state.seconds / 60) * 6) + 90;
-        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-
-        const hourDegrees = ((this.state.hours / 12) * 360) + ((this.state.minutes / 60) * 30) + 90;
-        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
     }
 
-    componentWillMount() {
+    componentDidMount() {
         setInterval(this.countingSecond, 1000)
     }
 
@@ -61,7 +58,7 @@ class JsClock extends Component {
 
             <div className="mainClock">
                 <div className='goBack'>
-                    <buton className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</buton>
+                    <button className='btn btn-success' onClick={this.context.router.history.goBack}>Go Back</button>
                 </div>
                 <div>
                     <div className="fullMoment">
