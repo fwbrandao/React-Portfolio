@@ -8,6 +8,7 @@ import JsClock from './javascriptThirty/projects/jsClock/index';
 import Canvas from './javascriptThirty/projects/canvas/index';
 import MapBox from './mapBox/index';
 import HeatMap from './mapBox/layers/heatmap/index';
+import FlexPanel from './javascriptThirty/projects/flexPanel/index';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Route path='/drum' component={DrumKit} ></Route>
         <Route path='/jsclock' component={JsClock} ></Route>
         <Route path='/canvas' component={Canvas} ></Route>
+        <Route path='/flexpanel' component={FlexPanel} ></Route>
 
         <Route path='/mapbox' component={MapBox} ></Route>
         <Route path='/heatmap' component={HeatMap} ></Route>

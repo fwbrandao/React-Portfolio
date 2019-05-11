@@ -18,6 +18,9 @@ class Javascript30 extends React.Component {
                         <li>
                             <Link to='/canvas' >Canvas</Link>
                         </li>
+                        <li>
+                            <Link to='/flexpanel' >Flex Panel</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
