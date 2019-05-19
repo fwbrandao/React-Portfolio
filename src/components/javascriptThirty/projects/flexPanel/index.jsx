@@ -3,29 +3,35 @@ import React, { Component } from 'react';
 import './flexPanel.css';
 
 class FlexPanel extends Component {
+
     toggleOpen1() {
         const panel1 = document.querySelector('.panel1');
         panel1.classList.toggle('open');
+        panel1.classList.toggle('open-active');
     };
 
     toggleOpen2() {
         const panel2 = document.querySelector('.panel2');
         panel2.classList.toggle('open');
+        panel2.classList.toggle('open-active');
     };
 
     toggleOpen3() {
         const panel3 = document.querySelector('.panel3');
         panel3.classList.toggle('open');
+        panel3.classList.toggle('open-active');
     };
 
     toggleOpen4() {
         const panel4 = document.querySelector('.panel4');
         panel4.classList.toggle('open');
+        panel4.classList.toggle('open-active');
     };
 
     toggleOpen5() {
         const panel5 = document.querySelector('.panel5');
         panel5.classList.toggle('open');
+        panel5.classList.toggle('open-active');
     };
 
     toggleActive(e) {
@@ -34,9 +40,6 @@ class FlexPanel extends Component {
             this.classList.toggle('open-active');
         }
     }
-
-
-    // panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
     render() {
 
